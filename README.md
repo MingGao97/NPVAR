@@ -14,7 +14,6 @@ This is an implementation of paper:
 - `NPVAR.R` Main function to run our algorithm, see demo below
 - `utils.R` Some helper function to simulate data and evaluate results
 - `ANM_gp.R` File used to generate Gaussian process model, see reference
-- `experiment` Folder contains experiments in paper, see `readme` in it for more details
 
 ## Demo
 Generate a *ER* graph with 5 nodes and 5 expected edges. Then generate data by a *SIN* model with noise variance *sigma*=0.5 and sample size 1000.
