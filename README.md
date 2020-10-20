@@ -1,10 +1,20 @@
-# NPVAR
- NPVAR: Learning Nonparametric DAG with variance assumption
+# NPVAR: Learning Nonparametric Causal Models
 
-This is an implementation of paper: 
-[A polynomial-time algorithm for learning nonparametric causal graphs](https://arxiv.org/abs/2006.11970)
+This is an `R` implementation of the following paper:
 
-## Requiment
+[1] Gao, M., Ding, Y., Aragam, B. (2020). [A polynomial-time algorithm for learning nonparametric causal graphs](https://arxiv.org/abs/2006.11970) ([NeurIPS 2020](https://nips.cc/Conferences/2020/)).
+
+If you find this code useful, please consider citing:
+```
+@inproceedings{gao2020npvar,
+    author = {Gao, Ming and Ding, Yi and Aragam, Bryon},
+    booktitle = {Advances in Neural Information Processing Systems},
+    title = {{A polynomial-time algorithm for learning nonparametric causal graphs}},
+    year = {2020}
+}
+```
+
+## Requirements
 - R
 - Package `np`
 - Package `mgcv`
@@ -12,8 +22,8 @@ This is an implementation of paper:
 
 ## Contents
 - `NPVAR.R` Main function to run our algorithm, see demo below
-- `utils.R` Some helper function to simulate data and evaluate results
-- `ANM_gp.R` File used to generate Gaussian process model, see reference
+- `utils.R` Some helper functions to simulate data and evaluate results
+- `ANM_gp.R` File used to generate data from a Gaussian process model, see references
 
 ## Demo
 Generate a *ER* graph with 5 nodes and 5 expected edges. Then generate data by a *SIN* model with noise variance *sigma*=0.5 and sample size 1000.
@@ -52,7 +62,6 @@ print(est)
 print(sum(abs(est - G)))
 ```
 
-## Reference
-We generate Gaussian process model through code of `RESIT` from [here](https://staff.fnwi.uva.nl/j.m.mooij/code/codeANM.zip)
-
-Naive equal variance code is from [here](https://github.com/WY-Chen/EqVarDAG)
+## References
+- We generate data from Gaussian process models through the `RESIT` code, from [here](https://staff.fnwi.uva.nl/j.m.mooij/code/codeANM.zip)
+- Original equal variance code for linear models is from [here](https://github.com/WY-Chen/EqVarDAG)
