@@ -14,6 +14,10 @@ If you find this code useful, please consider citing:
 }
 ```
 
+## Introduction
+
+The `NPVAR` algorithm is an algorithm for learning the structure of a directed acyclic graph (DAG) `G` that represents a potentially high-dimensional joint distribution `P(X)`. In other words, given `n` samples from `P(X)`, `NPVAR` learns the DAG `G` that generated these samples. In general, this problem is not well-defined since the DAG is not unique, however, we consider the setting where the residual variances `E[var(Xj|pa(j))]` are all approximately equal. In this setting, `NPVAR` is a polynomial-time algorithm for provably recovering the DAG `G`.
+
 ## Requirements
 - R
 - Package `np`
