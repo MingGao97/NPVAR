@@ -1,4 +1,4 @@
-# NPVAR: Learning Nonparametric Causal Models
+# NPVAR: Learning nonparametric causal graphs in polynomial-time
 
 This is an `R` implementation of the following paper:
 
